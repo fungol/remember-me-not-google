@@ -1,0 +1,12 @@
+{
+  "name": "Remember me not, Google",
+  "description": "This disables the 'remeber me' checkbox for both account login and 2FA.",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://accounts.google.com/ServiceLogin*","https://accounts.google.com/SmsAuth*","https://accounts.google.com/SecondFactor*"],
+      "js": ["remember-me-not-google.user.js"]
+    }
+  ]
+}
